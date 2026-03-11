@@ -8,7 +8,10 @@ font-family: 'Segoe UI', sans-serif;
 body{
 background:#f4f6fa;
 color:#333;
+line-height:1.6;
 }
+
+/* HEADER */
 
 header{
 background:#0f172a;
@@ -49,6 +52,9 @@ color:white;
 cursor:pointer;
 }
 
+
+/* HERO */
+
 .hero{
 height:90vh;
 background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
@@ -62,13 +68,14 @@ padding:20px;
 }
 
 .hero h1{
-font-size:52px;
+font-size:50px;
+margin-bottom:15px;
 animation:fadeUp 1s ease;
 }
 
 .hero p{
-margin:20px 0;
 font-size:20px;
+margin-bottom:25px;
 animation:fadeUp 1.4s ease;
 }
 
@@ -81,11 +88,23 @@ border-radius:6px;
 font-weight:bold;
 }
 
+
+/* SECTIONS */
+
 .container{
 width:85%;
 margin:auto;
 padding:70px 0;
 }
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+font-size:32px;
+}
+
+
+/* GRID */
 
 .grid{
 display:grid;
@@ -93,24 +112,96 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
+
+/* CARD */
+
 .card{
 background:white;
 padding:30px;
 border-radius:10px;
 box-shadow:0 8px 20px rgba(0,0,0,0.08);
 transition:0.3s;
+text-align:center;
+}
+
+.card i{
+font-size:40px;
+color:#ff6b00;
+margin-bottom:15px;
 }
 
 .card:hover{
 transform:translateY(-6px);
 }
 
-.fleet img{
+
+/* PAGE HERO */
+
+.page-hero{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.page-hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about-grid img{
 width:100%;
 border-radius:10px;
+}
+
+
+/* FLEET */
+
+.fleet img{
+width:100%;
 height:180px;
 object-fit:cover;
+border-radius:10px;
 }
+
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+form input, form textarea{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border:1px solid #ddd;
+border-radius:4px;
+}
+
+form button{
+background:#ff6b00;
+border:none;
+padding:12px;
+color:white;
+cursor:pointer;
+border-radius:4px;
+}
+
+
+/* FOOTER */
 
 footer{
 background:#0f172a;
@@ -118,6 +209,9 @@ color:white;
 text-align:center;
 padding:25px;
 }
+
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -136,6 +230,9 @@ text-decoration:none;
 box-shadow:0 6px 15px rgba(0,0,0,0.3);
 }
 
+
+/* ANIMATION */
+
 @keyframes fadeUp{
 from{
 opacity:0;
@@ -146,6 +243,9 @@ opacity:1;
 transform:translateY(0);
 }
 }
+
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -169,6 +269,11 @@ display:block;
 
 .hero h1{
 font-size:36px;
+}
+
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
 }
 
 }
